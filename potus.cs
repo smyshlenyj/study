@@ -1,6 +1,6 @@
 using System;
 
-public class Kata
+public class Dinglemouse
 {
     public static bool AllAlone(char[][] house)
     {
@@ -42,7 +42,7 @@ public class Kata
         // ищем точку с пыстым местом рядом и ставим на пустое точку
         while (rec < 100)
         {
-            for (int i = 0; i < house.Length; i++)
+            for (int i = 1; i < house.Length - 1; i++)
             {
 
                 for (int j = 0; j < house[i].Length; j++)
@@ -108,18 +108,19 @@ public class Kata
     {
 
 
-        char[][] house =
-        {
-            "#################             ".ToCharArray(),
-            "#     o         #   o         ".ToCharArray(),
-            "#          ######        o    ".ToCharArray(),
-            "####       #                  ".ToCharArray(),
-            "   #       ###################".ToCharArray(),
-            "   #    X                    #".ToCharArray(),
-            "   #                         #".ToCharArray(),
-            "   ###########################".ToCharArray()
-        
-        };
+        char[][] house ={
+"################################".ToCharArray(),
+"# o                            #".ToCharArray(),
+"#                              #".ToCharArray(),
+"#          ########            #".ToCharArray(),
+"#          #      #      X     #".ToCharArray(),
+"############      #            #".ToCharArray(),
+"                  ##############".ToCharArray(),
+"                                ".ToCharArray(),
+"                                ".ToCharArray(),
+"        o                   o   ".ToCharArray(),
+};
+
         AllAlone(house);
     }
 }
